@@ -70,7 +70,7 @@ export default function HeroSection() {
 
   const downloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/resume.pdf";
+    link.href = "/ojasCV1.pdf";
     link.download = "Ojas_Bhosale_Resume.pdf";
     link.click();
   };
