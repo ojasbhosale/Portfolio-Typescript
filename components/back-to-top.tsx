@@ -28,7 +28,7 @@ export function BackToTop() {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
-          className="fixed bottom-8 right-8 z-50"
+          className="fixed bottom-8 right-8 z-50 hidden md:block"
         >
           <Button
             onClick={scrollToTop}
