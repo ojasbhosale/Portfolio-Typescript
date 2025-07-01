@@ -213,65 +213,6 @@ export function ContactSection() {
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-          {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <div>
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Contact Information</h3>
-              <div className="space-y-4">
-                {contactInfo.map((info, index) => (
-                  <motion.a
-                    key={info.title}
-                    href={info.href}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1, type: "spring", stiffness: 100, damping: 20 }}
-                    viewport={{ once: true }}
-                    whileHover={{ scale: 1.03, boxShadow: "0 10px 20px rgba(0,0,0,0.1)" }}
-                    className="flex items-center space-x-4 p-4 rounded-xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/50 dark:border-slate-700/50 hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-300 group"
-                  >
-                    <div
-                      className={`p-3 rounded-lg bg-gradient-to-r ${info.color} bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-300 shadow-md`}
-                    >
-                      <info.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-slate-600 dark:text-slate-400 text-sm">{info.title}</p>
-                      <p className="text-slate-900 dark:text-white font-medium">{info.value}</p>
-                    </div>
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Follow Me</h3>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1, type: "spring", stiffness: 100, damping: 20 }}
-                    viewport={{ once: true }}
-                    whileHover={{ scale: 1.2, rotate: 5 }}
-                    whileTap={{ scale: 0.9 }}
-                    className={`p-3 rounded-full bg-white/80 dark:bg-slate-900/80 border border-slate-200/50 dark:border-slate-700/50 text-slate-600 dark:text-slate-400 ${social.color} transition-all duration-300 shadow-md hover:shadow-lg`}
-                  >
-                    <social.icon className="h-6 w-6" />
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-          </motion.div>
 
           {/* Contact Form */}
           <motion.div
@@ -376,6 +317,69 @@ export function ContactSection() {
               </CardContent>
             </Card>
           </motion.div>
+
+
+          {/* Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 20 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            <div>
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Contact Information</h3>
+              <div className="space-y-4">
+                {contactInfo.map((info, index) => (
+                  <motion.a
+                    key={info.title}
+                    href={info.href}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1, type: "spring", stiffness: 100, damping: 20 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.03, boxShadow: "0 10px 20px rgba(0,0,0,0.1)" }}
+                    className="flex items-center space-x-4 p-4 rounded-xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/50 dark:border-slate-700/50 hover:border-slate-300 dark:hover:border-slate-600 transition-all duration-300 group"
+                  >
+                    <div
+                      className={`p-3 rounded-lg bg-gradient-to-r ${info.color} bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-300 shadow-md`}
+                    >
+                      <info.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-slate-600 dark:text-slate-400 text-sm">{info.title}</p>
+                      <p className="text-slate-900 dark:text-white font-medium">{info.value}</p>
+                    </div>
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Follow Me</h3>
+              <div className="flex space-x-4">
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1, type: "spring", stiffness: 100, damping: 20 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.2, rotate: 5 }}
+                    whileTap={{ scale: 0.9 }}
+                    className={`p-3 rounded-full bg-white/80 dark:bg-slate-900/80 border border-slate-200/50 dark:border-slate-700/50 text-slate-600 dark:text-slate-400 ${social.color} transition-all duration-300 shadow-md hover:shadow-lg`}
+                  >
+                    <social.icon className="h-6 w-6" />
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+
+          
         </div>
 
         {/* Call to Action */}
