@@ -9,70 +9,70 @@ import { Button } from "@/components/ui/button"
 
 const projects = [
   {
-    title: "Expense Tracker Application",
+    title: "NewsFlash AI: GenAI News Summarizer",
     description:
-      "A comprehensive expense management system built with the MERN stack, featuring dynamic charts, real-time updates, and intuitive user interface for better financial insights.",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["React.js", "Node.js", "MongoDB", "Express.js", "Chart.js"],
+      "A full-stack AI-powered news application utilizing OpenAI GPT-3.5 for real-time news summarization and content generation.",
+    image: "/projects/newsflashai.png?height=400&width=600",
+    technologies: ["Nextjs", "Typescript", "OpenAI", "API Integration"],
     features: [
-      "Real-time expense tracking and categorization",
-      "Dynamic charts and data visualization",
-      "User authentication and secure data storage",
-      "Responsive design for all devices",
+      "AI-powered real-time summarization",
+      "GenAI API integration for NLP",
+      "Responsive frontend UI",
+      "Backend with secure endpoints",
     ],
-    github: "https://github.com/ojasbhosale",
-    demo: "#",
+    github: "https://github.com/ojasbhosale/NewsFlash-AI",
+    demo: "https://newsflashai.netlify.app/",
     icon: Database,
     color: "from-emerald-500 to-teal-500",
     bgGradient: "from-emerald-500/10 to-teal-500/10",
     borderColor: "border-emerald-500/20",
-    category: "Full-Stack",
+    category: "GenAI",
     status: "Live",
-    year: "2024"
+    year: "2025"
   },
   {
-    title: "AudibleScript: Text-Speech Conversion",
+    title: "Expenso: Full-Stack Expense Tracker App",
     description:
-      "An innovative web application that provides real-time text-to-speech and speech-to-text capabilities using the Web Speech API, with support for multiple file formats.",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["JavaScript", "Web Speech API", "HTML5", "CSS3"],
+      "A responsive and fully functional expense management tool for tracking, visualizing, and managing expenses with dynamic charting and CRUD features.",
+    image: "/projects/expenso.png?height=400&width=600",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Node.js", "Express.js"],
     features: [
-      "Real-time text-to-speech conversion",
-      "Speech-to-text recognition",
-      "File upload and download support",
-      "Multiple audio format compatibility",
+      "Real-time expense tracking",
+      "Interactive visual charts",
+      "CRUD operations with secure backend",
+      "Responsive and modern UI",
     ],
-    github: "https://github.com/ojasbhosale",
-    demo: "#",
+    github: "https://github.com/ojasbhosale/expenso-v2.git",
+    demo: "https://expensov2.netlify.app/",
     icon: Mic,
     color: "from-blue-500 to-cyan-500",
     bgGradient: "from-blue-500/10 to-cyan-500/10",
     borderColor: "border-blue-500/20",
-    category: "Frontend",
+    category: "Full Stack",
     status: "Live",
-    year: "2024"
+    year: "2025"
   },
   {
-    title: "Modulation Simulator",
+    title: "AudibleScript: Text-Speech Conversion",
     description:
-      "An educational tool for visualizing various signal modulation schemes using React.js and Chart.js, designed to help students and educators understand complex signal processing concepts.",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["React.js", "Chart.js", "JavaScript", "CSS3"],
+      "A browser-based application enabling seamless two-way conversion between text and speech using the Web Speech API, ideal for accessibility and productivity.",
+    image: "/projects/a3.png?height=400&width=600",
+    technologies: ["React.js", "JavaScript", "Web Speech API", "Chart.js"],
     features: [
-      "Interactive signal visualization",
-      "Multiple modulation scheme support",
-      "Real-time parameter adjustment",
-      "Educational interface design",
+      "Text-to-speech and speech-to-text",
+      "User audio uploads supported",
+      "Live transcription display",
+      "Downloadable audio output",
     ],
-    github: "https://github.com/ojasbhosale",
-    demo: "#",
+    github: "https://github.com/ojasbhosale/AudibleScript_Text-Speech_Conversion.git",
+    demo: "https://audible-script-ojasbhosale.netlify.app/",
     icon: BarChart3,
     color: "from-violet-500 to-purple-500",
     bgGradient: "from-violet-500/10 to-purple-500/10",
     borderColor: "border-violet-500/20",
-    category: "Education",
+    category: "Frontend",
     status: "Live",
-    year: "2023"
+    year: "2024"
   },
 ]
 
@@ -153,37 +153,23 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
               <div className="absolute inset-0 opacity-10">
                 <div className="w-full h-full" style={{
                   backgroundImage: `
-                    linear-gradient(45deg, rgba(0,0,0,0.1) 25%, transparent 25%),
+                    {linear-gradient(45deg, rgba(0,0,0,0.1) 25%, transparent 25%),
                     linear-gradient(-45deg, rgba(0,0,0,0.1) 25%, transparent 25%),
                     linear-gradient(45deg, transparent 75%, rgba(0,0,0,0.1) 75%),
-                    linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.1) 75%)
+                    linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.1) 75%)}
                   `,
                   backgroundSize: '20px 20px',
                   backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px'
                 }} />
               </div>
 
-              {/* Project Icon */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div
-                  className={`relative p-8 rounded-3xl bg-gradient-to-br ${project.color} shadow-2xl ${
-                    isHovered ? 'transform rotate-12 scale-110' : ''
-                  } transition-all duration-500`}
-                  animate={isHovered ? { rotate: [0, 5, -5, 0] } : {}}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  <ProjectIcon className="w-16 h-16 text-white" />
-                  
-                  {/* Glow Effect */}
-                  {isHovered && (
-                    <motion.div
-                      className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${project.color} opacity-30`}
-                      initial={{ scale: 1 }}
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    />
-                  )}
-                </motion.div>
+              {/* Project Thumbnail */}
+              <div className="absolute inset-0 overflow-hidden ">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover scale-105 transition-transform duration-500 group-hover:scale-110"
+                />
               </div>
 
               {/* Status Badge */}

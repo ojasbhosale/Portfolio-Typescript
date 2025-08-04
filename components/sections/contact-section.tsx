@@ -45,7 +45,7 @@ const socialLinks = [
   {
     icon: Linkedin,
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/ojas-bhosale-51103a251",
+    href: "https://www.linkedin.com/in/ojasbhosale",
     color: "hover:text-blue-400",
   },
   {
@@ -417,7 +417,7 @@ export function ContactSection() {
                 size="lg"
                 className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 dark:border-purple-600 dark:text-purple-400 dark:hover:bg-purple-600 dark:hover:text-white"
               >
-                <a href="https://www.linkedin.com/in/ojas-bhosale-51103a251" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/ojasbhosale" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="mr-2 h-5 w-5" />
                   Connect on LinkedIn
                 </a>
