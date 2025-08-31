@@ -129,13 +129,15 @@ export default function Navigation() {
               </button>
 
               {/* CTA Button - Desktop */}
-              <button
-                onClick={() => scrollToSection('#contact')}
-                className="hidden md:flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-violet-500 via-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-violet-500/25 hover:shadow-xl hover:shadow-violet-500/40 transition-all duration-300 transform hover:scale-105 group"
+              <a
+                href="https://buymeacoffee.com/ojasbhosale"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-semibold rounded-xl shadow-lg shadow-yellow-500/25 hover:shadow-xl hover:shadow-yellow-500/40 transition-all duration-300 transform hover:scale-105 group"
               >
-                <span>Let's Talk</span>
+                <span>Buy Me a Coffee</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </button>
+              </a>   
 
               {/* Mobile Menu Button */}
               <button
@@ -186,31 +188,35 @@ export default function Navigation() {
               
               {/* Mobile CTA */}
               <div className="pt-4">
-                <button
-                  onClick={() => scrollToSection('#contact')}
-                  className="w-full flex items-center justify-center space-x-2 px-6 py-4 bg-gradient-to-r from-violet-500 via-purple-500 to-pink-500 text-white font-semibold rounded-2xl shadow-lg shadow-violet-500/25 transition-all duration-300 transform hover:scale-[0.98]"
+                <a
+                  href="https://buymeacoffee.com/ojasbhosale"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center space-x-2 px-6 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-semibold rounded-2xl shadow-lg shadow-yellow-500/25 transition-all duration-300 transform hover:scale-[0.98]"
                 >
-                  <span>Let's Talk</span>
+                  <span>Buy Me a Coffee</span>
                   <ArrowUpRight className="w-4 h-4" />
-                </button>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </nav>
 
-      {/* Mobile Floating Action */}
+      {/* Mobile Floating Buy Me a Coffee Icon */}
       <div className="fixed bottom-6 right-6 lg:hidden z-40">
-        <div className="relative group">
-          <div className="absolute -inset-2 bg-gradient-to-r from-violet-600 to-purple-600 rounded-2xl blur-xl opacity-70 group-hover:opacity-100 transition-all duration-300 animate-pulse"></div>
-          <button
-            onClick={() => scrollToSection('#contact')}
-            className="relative w-14 h-14 bg-gradient-to-tr from-violet-500 via-purple-500 to-pink-500 rounded-2xl shadow-2xl flex items-center justify-center transform transition-all duration-300 hover:scale-110 active:scale-95"
-          >
-            <Sparkles className="w-6 h-6 text-white" />
-            <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent rounded-2xl"></div>
-          </button>
-        </div>
+        <a
+          href="https://buymeacoffee.com/ojasbhosale"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative w-12 h-12 bg-white rounded-2xl shadow-2xl flex items-center justify-center transform transition-all duration-300 hover:scale-110 active:scale-95"
+        >
+          <img
+            src="/coffee.png"
+            alt="Buy Me a Coffee"
+            className="w-12 h-12 rounded-md"
+          />
+        </a>
       </div>
     </>
   );
