@@ -161,7 +161,7 @@ export default function Navigation() {
         <div className={`lg:hidden transition-all duration-500 ease-out overflow-hidden ${
           isOpen ? "max-h-screen opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-4"
         }`}>
-          <div className="bg-white/95 dark:bg-slate-950/95 backdrop-blur-2xl border-t border-slate-200/20 dark:border-slate-800/20 shadow-2xl">
+          <div className="bg-white/95 dark:bg-slate-950/95 min-h-screen backdrop-blur-2xl border-t border-slate-200/20 dark:border-slate-800/20 shadow-2xl">
             <div className="px-4 py-6 space-y-2">
               {navItems.map((item, index) => {
                 const isActive = activeSection === item.href.substring(1);
@@ -205,18 +205,26 @@ export default function Navigation() {
 
       {/* Mobile Floating Buy Me a Coffee Icon */}
       <div className="fixed bottom-6 right-6 lg:hidden z-40">
-        <a
-          href="https://buymeacoffee.com/ojasbhosale"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative w-12 h-12 bg-white rounded-2xl shadow-2xl flex items-center justify-center transform transition-all duration-300 hover:scale-110 active:scale-95"
-        >
-          <img
-            src="/coffee.png"
-            alt="Buy Me a Coffee"
-            className="w-12 h-12 rounded-md"
-          />
-        </a>
+        <div className="relative group">
+          {/* Glowing animated background */}
+          <div className="absolute -inset-2 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg blur-xl opacity-70 group-hover:opacity-100 transition-all duration-400 animate-pulse"></div>
+
+          {/* Button with Coffee Image */}
+          <a
+            href="https://buymeacoffee.com/ojasbhosale"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative w-14 h-14 rounded-lg shadow-2xl flex items-center justify-center transform transition-all duration-300 hover:scale-110 active:scale-95 overflow-hidden"
+          >
+            <img
+              src="/coffee.png"
+              alt="Buy Me a Coffee"
+              className="w-full h-full object-cover rounded-lg"
+            />
+            {/* Subtle shine overlay */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent rounded-lg"></div>
+          </a>
+        </div>
       </div>
     </>
   );
