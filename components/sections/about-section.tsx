@@ -53,7 +53,7 @@ const highlights = [
   {
     icon: GraduationCap,
     title: "Continuous Learner",
-    description: "B.Tech in ECE from IIIT Manipur with strong technical foundation",
+    description: "B.Tech from IIIT Manipur with strong technical foundation",
     color: "from-violet-500 to-purple-500",
     gradient: "from-violet-500/10 to-purple-500/10"
   },
@@ -310,7 +310,7 @@ export default function AboutSection() {
               <div className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-sm border border-emerald-500/20 rounded-2xl p-4 hover:scale-105 transition-all duration-300">
                 <div className="text-center">
                   <Trophy className="w-8 h-8 mx-auto mb-2 text-emerald-600 dark:text-emerald-400" />
-                  <div className="text-sm font-medium text-emerald-700 dark:text-emerald-300">CPI: 7.2</div>
+                  <div className="text-sm font-medium text-emerald-700 dark:text-emerald-300">Strong Foundation</div>
                   <div className="text-xs text-slate-600 dark:text-slate-400">Academic</div>
                 </div>
               </div>
